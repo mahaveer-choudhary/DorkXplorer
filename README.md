@@ -36,7 +36,7 @@ python dork.py
 
 # 💡Example Execution : 
 
-![Example](https://github.com/mahaveer-choudhary/xss-scanner/blob/main/images/img1.png)
+![Example](https://github.com/mahaveer-choudhary/DorkXplorer/blob/main/images/image%202.png)
 
 # ✅Output
 - URLs matching your dorking query will be displayed. 
@@ -52,7 +52,4 @@ python dork.py
 
 ##  📸 Screenshots
 ### 🔹Example Output
-![output image](https://github.com/mahaveer-choudhary/xss-scanner/blob/main/images/img1.png)
-
-### 🔹Script Running
-![output image](https://github.com/mahaveer-choudhary/xss-scanner/blob/main/images/img1.png)
+![output image](https://github.com/mahaveer-choudhary/DorkXplorer/blob/main/images/image%201.png)
