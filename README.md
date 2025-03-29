@@ -18,8 +18,8 @@ It enables you to search for specific information on the web through advanced se
 ## 🚀Installation
 1. Clone the repository or download the script:
     ```bash
-    git clone https://github.com/mahaveer-choudhary/dorking.py
-    cd dorking.py
+    https://github.com/mahaveer-choudhary/DorkXplorer.git
+    cd DorkXplorer
     ```
 
 2. Install required dependencies : 
