@@ -29,9 +29,16 @@ It enables you to search for specific information on the web through advanced se
 
 ## 🛠️Usage
 
-Run the script : 
+### Run the script
+
+for windows :
 ```bash
 python dork.py
+```
+
+for linux :
+```bash
+python3 dork.py
 ```
 
 # 💡Example Execution : 
