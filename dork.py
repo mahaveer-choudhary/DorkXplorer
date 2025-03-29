@@ -2,12 +2,24 @@ from __future__ import print_function
 import sys
 import time
 import requests
+from colorama import Fore, Style, init
+
+init(autoreset=True)
 
 ## Checking Python version
 if sys.version_info[0] < 3:
     print("\n\033[91m[ERROR] This tool requires Python 3.x\033[0m\n")
     sys.exit(1)
 
+def logo():
+    print(Fore.LIGHTMAGENTA_EX + Style.BRIGHT + r"""
+________                __    ____  ___      .__                              
+\______ \   ___________|  | __\   \/  /_____ |  |   ___________   ___________ 
+ |    |  \ /  _ \_  __ \  |/ / \     /\____ \|  |  /  _ \_  __ \_/ __ \_  __ \
+ |    `   (  <_> )  | \/    <  /     \|  |_> >  |_(  <_> )  | \/\  ___/|  | \/
+/_______  /\____/|__|  |__|_ \/___/\  \   __/|____/\____/|__|    \___  >__|   
+        \/                  \/      \_/__|                           \/       
+    """+ Style.RESET_ALL)
 ## Color codes
 class colors:
     RED = "\033[91m"
@@ -32,11 +44,20 @@ class colors:
         """Main function for handling Google Dorking."""
         global log_file  # Log file is accessible globally
         try:
-            dork = input(f"{colors.CYAN}\n[+] Enter the Dork Search Query: {colors.RESET}")
+            logo()
+            
+            while True :
+                dork = input(f"{colors.CYAN}\n[+] Enter the Dork Search Query: {colors.RESET}")
+                if dork :
+                    break
+                else :
+                    print(f"{colors.RED}[Error] You didn't enter dork, please enter it first !")
 
             user_choice = input(f"{colors.CYAN}[+] Enter Total Number of Results you want (or type 'all' to fetch everything): {colors.RESET}").strip().lower()
+            if not user_choice :
+                print(f"{colors.RED}[-] By default it selects 'all'! ")
 
-            if user_choice == "all":
+            if not user_choice or user_choice == "all":
                 total_result = float("inf")  # Fetch until no more results
             else:
                 try:
@@ -56,7 +77,7 @@ class colors:
                 if not log_file.endswith(".txt"):
                     log_file += ".txt"
 
-            print(f"\n{colors.GREEN}[INFO] Searching... Please wait... {colors.RESET}\n")
+            print(f"\n{colors.GREEN}[INFO] Searching! Please wait... {colors.RESET}\n")
 
             fetched = 0
             start = 0
