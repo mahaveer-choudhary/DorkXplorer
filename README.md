@@ -59,4 +59,4 @@ python3 dork.py
 
 ##  📸 Screenshots
 ### 🔹Example Output
-![output image](https://github.com/mahaveer-choudhary/DorkXplorer/blob/main/images/image%201.png)
+![output image](https://github.com/mahaveer-choudhary/DorkXplorer/blob/main/images/image%203.png)
